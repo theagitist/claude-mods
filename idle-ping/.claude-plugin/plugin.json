@@ -1,0 +1,14 @@
+{
+  "name": "idle-ping",
+  "version": "0.1.0",
+  "description": "When a turn that did real work ends, ping the user out of band (Telegram if a bot token + TELEGRAM_CHAT_ID are set, else email via CLAUDE_PING_EMAIL + a mailer).",
+  "author": { "name": "theagitist" },
+  "userConfig": {
+    "minTools": {
+      "type": "number",
+      "title": "Minimum tool calls",
+      "description": "Minimum tool calls in a turn before it counts as real work worth pinging about.",
+      "default": 2
+    }
+  }
+}

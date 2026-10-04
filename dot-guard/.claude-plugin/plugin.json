@@ -1,0 +1,14 @@
+{
+  "name": "dot-guard",
+  "version": "0.1.0",
+  "description": "Block `git add` of a whole $HOME work-tree (dot add -A/./*), which would stage your entire home directory.",
+  "author": { "name": "theagitist" },
+  "userConfig": {
+    "wrappers": {
+      "type": "string",
+      "title": "Home-worktree wrappers",
+      "description": "Comma-separated command names that run git with --work-tree=$HOME (bare-repo dotfiles aliases). `add -A/./*` through these is blocked.",
+      "default": "dot"
+    }
+  }
+}

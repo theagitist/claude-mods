@@ -1,0 +1,6 @@
+{
+  "name": "box-status",
+  "version": "0.1.0",
+  "description": "Status line: which box you're on, the out-of-band ping channel it resolves (telegram/email/none), and whether passwordless sudo is available.",
+  "author": { "name": "theagitist" }
+}

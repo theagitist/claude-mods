@@ -1,0 +1,6 @@
+{
+  "name": "emdash-watch",
+  "version": "0.1.0",
+  "description": "Flag em-dashes you introduce into public-facing prose (notes, docs, READMEs, HTML); internal files (CLAUDE.md, memory) are exempt. Non-blocking note to the model.",
+  "author": { "name": "theagitist" }
+}

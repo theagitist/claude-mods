@@ -1,0 +1,6 @@
+{
+  "name": "home-path-guard",
+  "version": "0.1.0",
+  "description": "Flag hardcoded user home paths (/home/<user>, /Users/<user>) you write into files; nudge $HOME / ~ instead. Machine-local (*.local.*) files exempt. Non-blocking.",
+  "author": { "name": "theagitist" }
+}
