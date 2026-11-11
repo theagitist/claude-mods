@@ -12,7 +12,7 @@ other people.
 | Mod | What it does | How it shows |
 |---|---|---|
 | `dot-guard` | Blocks a `git add` that would stage your whole `$HOME` work-tree (`dot add -A`, `dot add .`, `dot add *`). One fat-finger away from committing your entire home directory. | Denies the tool call with a reason. |
-| `emdash-watch` | Flags em-dashes the model writes into public-facing prose (`.md`, `.html`, `.css`, `.txt`, `.rst`). Internal files (`CLAUDE.md`, anything under `memory/` or `.claude/`) are exempt. | Non-blocking note appended to the write's result, visible to the model only. |
+| `emdash-watch` | Flags em-dashes the model writes into prose files (`.md`, `.html`, `.css`, `.txt`, `.rst`), including `CLAUDE.md` and memory files. | Non-blocking note appended to the write's result, visible to the model only. |
 | `home-path-guard` | Flags a hardcoded user home (`/home/<user>`, `/Users/<user>`) written into a file, nudging `$HOME` / `~`. Machine-local files (`*.local.*`) are exempt. | Non-blocking note to the model. |
 | `box-status` | Status line showing which box you are on, which out-of-band channel it can reach you on (`telegram` / `email` / `none`), and whether passwordless `sudo` works. | One status-line entry under the prompt. |
 | `idle-ping` | When a turn that did real work ends, pings you out of band so you can step away. Telegram when a bot token and chat id are present, otherwise email. | Sends a message; logs to the debug sink when no channel is configured. |
