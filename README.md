@@ -14,8 +14,8 @@ other people.
 | `dot-guard` | Blocks a `git add` that would stage your whole `$HOME` work-tree (`dot add -A`, `dot add .`, `dot add *`). One fat-finger away from committing your entire home directory. | Denies the tool call with a reason. |
 | `emdash-watch` | Flags em-dashes the model writes into prose files (`.md`, `.html`, `.css`, `.txt`, `.rst`), including `CLAUDE.md` and memory files. | Non-blocking note appended to the write's result, visible to the model only. |
 | `home-path-guard` | Flags a hardcoded user home (`/home/<user>`, `/Users/<user>`) written into a file, nudging `$HOME` / `~`. Machine-local files (`*.local.*`) are exempt. | Non-blocking note to the model. |
-| `box-status` | Status line showing which box you are on, which out-of-band channel it can reach you on (`telegram` / `email` / `none`), and whether passwordless `sudo` works. | One status-line entry under the prompt. |
-| `idle-ping` | When a turn that did real work ends, pings you out of band so you can step away. Telegram when a bot token and chat id are present, otherwise email. | Sends a message; logs to the debug sink when no channel is configured. |
+| `box-status` | Status line showing which box you are on, which out-of-band channel it can reach you on (`app` / `telegram` / `email` / `none`), and whether passwordless `sudo` works. | One status-line entry under the prompt. |
+| `idle-ping` | Not loaded since 2026-11-23: the agent dashboard app sends these notifications now. When a turn that did real work ends, pings you out of band so you can step away. Telegram when a bot token and chat id are present, otherwise email. | Sends a message; logs to the debug sink when no channel is configured. |
 
 ## Install (per machine)
 
@@ -32,7 +32,7 @@ Then point Claude Code at the five folders. The cleanest cross-machine way is
 ```json
 {
   "env": {
-    "CLAUDE_CODE_PLUGIN_DIRS": "~/apps/claude-mods/dot-guard:~/apps/claude-mods/emdash-watch:~/apps/claude-mods/box-status:~/apps/claude-mods/home-path-guard:~/apps/claude-mods/idle-ping"
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/apps/claude-mods/dot-guard:~/apps/claude-mods/emdash-watch:~/apps/claude-mods/box-status:~/apps/claude-mods/home-path-guard"
   }
 }
 ```

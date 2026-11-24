@@ -9,9 +9,11 @@ async function shortHost($: any): Promise<string> {
   return (await $.env.get('HOSTNAME')) || (await $.env.get('HOST')) || 'host'
 }
 
-// Which out-of-band channel this box can reach the user on. Mirrors idle-ping.
+// Which out-of-band channel this box can reach the user on: the agent dashboard app when its
+// reporter is installed, otherwise what idle-ping would use.
 async function channel($: any): Promise<string> {
   const home = (await $.env.get('HOME')) ?? ''
+  if (home && (await $.fs.exists(`${home}/apps/agent-dashboard/reporter.py`).catch(() => false))) return 'app'
   const tgEnv = `${home}/.claude/channels/telegram/.env`
   if (home && (await $.fs.exists(tgEnv).catch(() => false))) {
     const txt = await $.fs.read(tgEnv).catch(() => '')
